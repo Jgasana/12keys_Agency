@@ -6,7 +6,7 @@ export function Contact() {
     {
       icon: MapPin,
       title: 'Address',
-      content: '123 Luxury Lane, Mayfair, London',
+      content: 'KK 20 Avenue, Kigali Rwanda',
     },
     {
       icon: Phone,
