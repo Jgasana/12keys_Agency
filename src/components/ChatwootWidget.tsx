@@ -33,6 +33,9 @@ export function ChatwootWidget({
   position = 'right',
 }: ChatwootWidgetProps) {
   useEffect(() => {
+    console.log('Chatwoot Widget: Initializing with token:', websiteToken);
+    console.log('Chatwoot Widget: Base URL:', baseUrl);
+
     window.chatwootSettings = {
       hideMessageBubble: false,
       position: position,
@@ -42,20 +45,30 @@ export function ChatwootWidget({
 
     const existingScript = document.querySelector(`script[src="${baseUrl}/packs/js/sdk.js"]`);
     if (existingScript) {
+      console.log('Chatwoot Widget: Script already exists');
       return;
     }
 
+    console.log('Chatwoot Widget: Creating script element');
     const script = document.createElement('script');
     script.src = `${baseUrl}/packs/js/sdk.js`;
     script.async = true;
 
     script.onload = () => {
+      console.log('Chatwoot Widget: Script loaded successfully');
       if (window.chatwootSDK) {
+        console.log('Chatwoot Widget: Running SDK');
         window.chatwootSDK.run({
           websiteToken: websiteToken,
           baseUrl: baseUrl,
         });
+      } else {
+        console.error('Chatwoot Widget: SDK not found on window');
       }
+    };
+
+    script.onerror = (error) => {
+      console.error('Chatwoot Widget: Failed to load script', error);
     };
 
     const firstScript = document.getElementsByTagName('script')[0];
@@ -64,6 +77,7 @@ export function ChatwootWidget({
     } else {
       document.body.appendChild(script);
     }
+    console.log('Chatwoot Widget: Script element added to DOM');
 
     return () => {
       const scriptToRemove = document.querySelector(`script[src="${baseUrl}/packs/js/sdk.js"]`);
