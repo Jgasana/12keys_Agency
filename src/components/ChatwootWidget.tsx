@@ -40,9 +40,13 @@ export function ChatwootWidget({
       type: 'expanded_bubble',
     };
 
+    const existingScript = document.querySelector(`script[src="${baseUrl}/packs/js/sdk.js"]`);
+    if (existingScript) {
+      return;
+    }
+
     const script = document.createElement('script');
     script.src = `${baseUrl}/packs/js/sdk.js`;
-    script.defer = true;
     script.async = true;
 
     script.onload = () => {
@@ -54,12 +58,17 @@ export function ChatwootWidget({
       }
     };
 
-    document.body.appendChild(script);
+    const firstScript = document.getElementsByTagName('script')[0];
+    if (firstScript && firstScript.parentNode) {
+      firstScript.parentNode.insertBefore(script, firstScript);
+    } else {
+      document.body.appendChild(script);
+    }
 
     return () => {
-      const existingScript = document.querySelector(`script[src="${baseUrl}/packs/js/sdk.js"]`);
-      if (existingScript) {
-        document.body.removeChild(existingScript);
+      const scriptToRemove = document.querySelector(`script[src="${baseUrl}/packs/js/sdk.js"]`);
+      if (scriptToRemove && scriptToRemove.parentNode) {
+        scriptToRemove.parentNode.removeChild(scriptToRemove);
       }
 
       if (window.$chatwoot) {
