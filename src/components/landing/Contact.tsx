@@ -11,7 +11,7 @@ export function Contact() {
     {
       icon: Phone,
       title: 'Phone',
-      content: '+250 788863209',
+      content: '+250 788863209/ +250 795422953',
     },
     {
       icon: Mail,
