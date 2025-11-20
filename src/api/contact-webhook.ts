@@ -7,7 +7,7 @@ export interface ContactWebhookPayload {
   timestamp?: string;
 }
 
-const WEBHOOK_URL = 'https://12keys-agency-n8n.go13ce.easypanel.host/webhook/afc6202e-c344-4615-9602-6edb0411e155';
+const WEBHOOK_URL = 'https://12keys-agency-n8n.go13ce.easypanel.host/webhook/aaed8b10-6338-4a55-bc2f-96dd2e3d1e40';
 
 export async function sendToWebhook(data: ContactWebhookPayload): Promise<void> {
   const payload = {
