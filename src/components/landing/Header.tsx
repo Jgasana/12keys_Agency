@@ -42,7 +42,7 @@ export function Header() {
               <span className="font-light">Call Us</span>
             </a>
             <a
-              href="mailto:info@12keys.com"
+              href="mailto:info@12keys.agency"
               className="flex items-center gap-2 text-sm text-gray-600 hover:text-[#8e6d46] transition-colors"
             >
               <Mail className="w-4 h-4" />
@@ -82,7 +82,7 @@ export function Header() {
                 <span className="font-light">Call Us</span>
               </a>
               <a
-                href="mailto:info@12keys.com"
+                href="mailto:info@12keys.agency"
                 className="flex items-center gap-2 text-sm text-gray-600 hover:text-[#8e6d46] transition-colors py-2"
               >
                 <Mail className="w-4 h-4" />
