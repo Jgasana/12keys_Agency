@@ -11,6 +11,7 @@ interface ServiceContactFormProps {
 interface FormData {
   name: string;
   email: string;
+  serviceType: string;
   phone: string;
   message: string;
   serviceName: string;
@@ -20,6 +21,7 @@ export function ServiceContactForm({ serviceName = '', onSubmit }: ServiceContac
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
+    serviceType: '',
     phone: '',
     message: '',
     serviceName,
@@ -61,6 +63,7 @@ export function ServiceContactForm({ serviceName = '', onSubmit }: ServiceContac
         phone: formData.phone,
         message: formData.message,
         serviceName: formData.serviceName,
+        subject: formData.serviceType,
       });
 
       if (onSubmit) {
@@ -71,6 +74,7 @@ export function ServiceContactForm({ serviceName = '', onSubmit }: ServiceContac
       setFormData({
         name: '',
         email: '',
+        serviceType: '',
         phone: '',
         message: '',
         serviceName,
@@ -116,6 +120,22 @@ export function ServiceContactForm({ serviceName = '', onSubmit }: ServiceContac
       </div>
 
       <div>
+        <label htmlFor="serviceType" className="block text-sm font-light tracking-wide uppercase text-gray-700 mb-2">
+          Service Type
+        </label>
+        <input
+          type="text"
+          id="serviceType"
+          name="serviceType"
+          value={formData.serviceType}
+          onChange={handleChange}
+          required
+          placeholder="e.g., Private Events, Corporate Functions, Luxury Experiences"
+          className="w-full px-4 py-3 border border-gray-300 focus:border-[#8e6d46] focus:outline-none transition-colors bg-white"
+        />
+      </div>
+
+      <div>
         <label htmlFor="phone" className="block text-sm font-light tracking-wide uppercase text-gray-700 mb-2">
           Phone
         </label>
@@ -125,7 +145,6 @@ export function ServiceContactForm({ serviceName = '', onSubmit }: ServiceContac
           name="phone"
           value={formData.phone}
           onChange={handleChange}
-          required
           className="w-full px-4 py-3 border border-gray-300 focus:border-[#8e6d46] focus:outline-none transition-colors bg-white"
         />
       </div>

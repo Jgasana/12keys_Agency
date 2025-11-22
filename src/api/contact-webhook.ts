@@ -4,6 +4,7 @@ export interface ContactWebhookPayload {
   phone: string;
   message: string;
   serviceName: string;
+  subject: string;
   timestamp?: string;
 }
 
