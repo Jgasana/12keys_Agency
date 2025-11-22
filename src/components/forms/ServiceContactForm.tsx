@@ -125,7 +125,7 @@ export function ServiceContactForm({ serviceName = '', onSubmit }: ServiceContac
             value={formData.lastName}
             onChange={handleChange}
             required
-            placeholder="e.g., Smith"
+            placeholder="e.g., Mugabo"
             className="w-full px-4 py-3 border border-gray-300 focus:border-[#8e6d46] focus:outline-none transition-colors bg-white"
           />
         </div>
