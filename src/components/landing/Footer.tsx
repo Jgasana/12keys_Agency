@@ -25,7 +25,7 @@ export function Footer() {
               12 Keys Agency
             </h3>
             <p className="text-gray-400 font-light leading-relaxed">
-              Your trusted partner for exceptional private events and luxury concierge services.
+              Your trusted partner for exceptional concierge services.
             </p>
           </div>
 
