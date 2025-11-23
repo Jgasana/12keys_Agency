@@ -14,7 +14,7 @@ export function Hero() {
 
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-light tracking-widest uppercase text-white mb-6 animate-fade-in">
-          Luxury Concierge
+          Luxury Concierge in Rwanda
         </h1>
         <p className="text-xl md:text-2xl font-light text-white/90 tracking-wide mb-8 animate-fade-in-delay">
           Exceptional service and bespoke experiences
