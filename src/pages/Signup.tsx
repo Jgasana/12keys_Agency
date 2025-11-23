@@ -60,7 +60,7 @@ export function Signup() {
       <div className="max-w-md w-full bg-white p-8 shadow-lg">
         <div className="text-center mb-8">
           <h1 className="text-3xl font-light tracking-widest uppercase text-[#8e6d46] mb-2">
-            12 Keys Agency
+            12Keys Agency
           </h1>
           <p className="text-gray-600 font-light">Create your account</p>
         </div>

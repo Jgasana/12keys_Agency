@@ -4,13 +4,63 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>12 Keys Agency Landing Page &amp; SaaS Foundation</title>
+    <title>12Keys Agency</title>
+
     <meta property="og:image" content="https://bolt.new/static/og_default.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
-</head>
+  </head>
+
   <body>
     <div id="root"></div>
+
+    <!-- React/Vite app -->
     <script type="module" src="/src/main.tsx"></script>
+
+    <!-- 🔥 SAFE CHATWOOT WIDGET LOADER (DO NOT MODIFY) -->
+    <script>
+      console.log("Chatwoot bootstrap script injected");
+
+      document.addEventListener("DOMContentLoaded", function () {
+        console.log("DOM fully loaded");
+
+        var BASE_URL = "https://12keys-agency-chatwoot.go13ce.easypanel.host";
+        var sdkUrl = BASE_URL + "/packs/js/sdk.js";
+
+        // Load Chatwoot SDK
+        var chatwootScript = document.createElement("script");
+        chatwootScript.src = sdkUrl;
+        chatwootScript.async = true;
+
+        chatwootScript.onload = function () {
+          console.log("Chatwoot SDK loaded, waiting for chatwootSDK global...");
+          waitForChatwoot();
+        };
+
+        chatwootScript.onerror = function (err) {
+          console.error("Failed to load Chatwoot SDK:", err);
+        };
+
+        document.body.appendChild(chatwootScript);
+
+        function waitForChatwoot() {
+          if (!window.chatwootSDK) {
+            console.log("chatwootSDK not ready, retrying...");
+            setTimeout(waitForChatwoot, 200);
+            return;
+          }
+
+          console.log("chatwootSDK found — initializing widget...");
+
+          window.chatwootSDK.run({
+            websiteToken: "JqdHQ2WwSuyfvKNf5PsZsmR7",
+            baseUrl: BASE_URL
+          });
+
+          console.log("Chatwoot widget initialized successfully");
+        }
+      });
+    </script>
+    <!-- 🔥 END CHATWOOT LOADER -->
   </body>
 </html>

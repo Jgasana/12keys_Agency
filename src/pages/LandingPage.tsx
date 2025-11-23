@@ -4,12 +4,8 @@ import { Services } from '../components/landing/Services';
 import { About } from '../components/landing/About';
 import { Contact } from '../components/landing/Contact';
 import { Footer } from '../components/landing/Footer';
-import { ChatwootWidget } from '../components/ChatwootWidget';
 
 export function LandingPage() {
-  const chatwootToken = import.meta.env.VITE_CHATWOOT_WEBSITE_TOKEN || 'CkhSMb1UmbXTCKCdzorA6A9Z';
-  const chatwootBaseUrl = import.meta.env.VITE_CHATWOOT_BASE_URL || 'https://12keys-agency-chatwoot.go13ce.easypanel.host';
-
   return (
     <div className="min-h-screen">
       <Header />
@@ -20,12 +16,6 @@ export function LandingPage() {
         <Contact />
       </main>
       <Footer />
-      <ChatwootWidget
-        websiteToken={chatwootToken}
-        baseUrl={chatwootBaseUrl}
-        position="right"
-        locale="en"
-      />
     </div>
   );
 }

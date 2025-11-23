@@ -119,7 +119,7 @@ export function StaffDashboard() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
           <div>
             <h1 className="text-2xl font-light tracking-widest uppercase text-[#8e6d46]">
-              12 Keys Agency
+              12Keys Agency
             </h1>
             <p className="text-sm text-gray-600 font-light mt-1">Staff Portal</p>
           </div>

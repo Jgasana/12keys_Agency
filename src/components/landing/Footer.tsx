@@ -21,11 +21,11 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
-            <h3 className="text-2xl font-light tracking-widest uppercase mb-6 text-[#a2886a]">
-              12 Keys Agency
-            </h3>
+           <h3 className="text-3xl font-light tracking-widest uppercase mb-6 text-[#a2886a]">
+  <span className="text-4xl font-normal">12</span>keys Agency
+</h3>
             <p className="text-gray-400 font-light leading-relaxed">
-              Your trusted partner for exceptional private events and luxury concierge services.
+              Your trusted partner for exceptional concierge services.
             </p>
           </div>
 
@@ -54,15 +54,15 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-3 text-gray-400 font-light">
                 <Phone className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                <span>+250 788863209</span>
+                <span>+250 788863209/+250 795422953</span>
               </li>
               <li className="flex items-start gap-3 text-gray-400 font-light">
                 <Mail className="w-5 h-5 flex-shrink-0 mt-0.5" />
                 <span>info@12keys.agency</span>
               </li>
               <li className="flex items-start gap-3 text-gray-400 font-light">
-                <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                <span>KK 20 Avenue<br />Kigali, Rwanda</span>
+                <Phone className="w-5 h-5 flex-shrink-0 mt-0.5" />
+                <span>Telegram Chat:<br />Twelvekeys_bot</span>
               </li>
             </ul>
           </div>
@@ -91,7 +91,7 @@ export function Footer() {
 
         <div className="border-t border-gray-800 pt-8 text-center">
           <p className="text-gray-400 font-light text-sm">
-            &copy; {currentYear} 12 Keys Agency. All rights reserved.
+            &copy; {currentYear} 12Keys Agency. All rights reserved.
           </p>
         </div>
       </div>
