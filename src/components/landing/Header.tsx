@@ -17,7 +17,7 @@ export function Header() {
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0">
             <a href="#" className="text-2xl font-light tracking-widest uppercase text-[#8e6d46]">
-              12 Keys Agency
+              12Keys Agency
             </a>
           </div>
 
