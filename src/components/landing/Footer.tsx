@@ -22,7 +22,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
            <h3 className="text-3xl font-light tracking-widest uppercase mb-6 text-[#a2886a]">
-  <span className="text-6xl font-normal">12</span>keys Agency
+  <span className="text-4xl font-normal">12</span>keys Agency
 </h3>
 
 
