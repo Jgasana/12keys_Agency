@@ -13,31 +13,34 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
     <script>
-      console.log("Chatwoot script injected on:", window.location.hostname);
-      (function(d,t) {
-        var BASE_URL="https://12keys-agency-chatwoot.go13ce.easypanel.host";
-        console.log("Chatwoot: Attempting to load SDK from:", BASE_URL);
-        var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-        g.src=BASE_URL+"/packs/js/sdk.js";
-        g.async = true;
-        s.parentNode.insertBefore(g,s);
-        g.onload=function(){
-          console.log("Chatwoot: SDK loaded successfully");
-          try {
-            window.chatwootSDK.run({
-              websiteToken: 'JqdHQ2WwSuyfvKNf5PsZsmR7',
-              baseUrl: BASE_URL
-            });
-            console.log("Chatwoot: Widget initialized with token JqdHQ2WwSuyfvKNf5PsZsmR7");
-          } catch(err) {
-            console.error("Chatwoot: Failed to initialize widget:", err);
-          }
-        };
-        g.onerror = function(e) {
-          console.error("Chatwoot SDK failed to load:", e);
-          console.error("Chatwoot: Check if", BASE_URL, "is accessible");
-        };
-      })(document,"script");
-    </script>
+(function(d,t) {
+  console.log("Chatwoot init script running");
+  var BASE_URL = "https://12keys-agency-chatwoot.go13ce.easypanel.host";
+  var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+  console.log("First script tag:", s);
+
+  g.src = BASE_URL + "/packs/js/sdk.js";
+  g.async = true;
+
+  g.onload = function() {
+    console.log("Chatwoot SDK loaded");
+    window.chatwootSDK.run({
+      websiteToken: "JqdHQ2WwSuyfvKNf5PsZsmR7",
+      baseUrl: BASE_URL
+    });
+  };
+
+  g.onerror = function(err) {
+    console.error("Chatwoot SDK failed to load:", err);
+  };
+
+  if (s && s.parentNode) {
+    s.parentNode.insertBefore(g, s);
+  } else {
+    console.warn("No <script> tag found in DOM. Appending Chatwoot script to <body>.");
+    document.body.appendChild(g);
+  }
+})(document, "script");
+</script>
   </body>
 </html>
