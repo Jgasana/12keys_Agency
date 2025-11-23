@@ -9,7 +9,7 @@ export function Dashboard() {
       <header className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
           <h1 className="text-2xl font-light tracking-widest uppercase text-[#8e6d46]">
-            12 Keys Agency
+            12Keys Agency
           </h1>
           <button
             onClick={signOut}
