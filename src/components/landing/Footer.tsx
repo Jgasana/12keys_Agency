@@ -21,8 +21,8 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
-            <h3 className="text-6x4 font-light tracking-widest uppercase mb-6 text-[#a2886a]">
-              12keys Agency
+            <h3 className="text-3x1 font-light tracking-widest uppercase mb-6 text-[#a2886a]">
+              12 keys Agency
             </h3>
             <p className="text-gray-400 font-light leading-relaxed">
               Your trusted partner for exceptional concierge services.
