@@ -61,7 +61,7 @@ export function Footer() {
                 <span>info@12keys.agency</span>
               </li>
               <li className="flex items-start gap-3 text-gray-400 font-light">
-                <Chat className="w-5 h-5 flex-shrink-0 mt-0.5" />
+                <Instagram className="w-5 h-5 flex-shrink-0 mt-0.5" />
                 <span>Telegram Chat:<br />Twelvekeys_bot</span>
               </li>
             </ul>
