@@ -25,7 +25,7 @@ export function Footer() {
               12 Keys Agency
             </h3>
             <p className="text-gray-400 font-light leading-relaxed">
-              Your trusted partner for exceptional concierge services.
+              Your trusted partner for exceptional private events and luxury concierge services.
             </p>
           </div>
 
@@ -54,15 +54,15 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-3 text-gray-400 font-light">
                 <Phone className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                <span>+250 788863209/+250 795422953</span>
+                <span>+250 788863209</span>
               </li>
               <li className="flex items-start gap-3 text-gray-400 font-light">
                 <Mail className="w-5 h-5 flex-shrink-0 mt-0.5" />
                 <span>info@12keys.agency</span>
               </li>
               <li className="flex items-start gap-3 text-gray-400 font-light">
-                <Phone className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                <span>Telegram Chat:<br />Twelvekeys_bot</span>
+                <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" />
+                <span>KK 20 Avenue<br />Kigali, Rwanda</span>
               </li>
             </ul>
           </div>

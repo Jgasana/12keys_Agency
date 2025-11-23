@@ -17,7 +17,7 @@ export function Hero() {
           Luxury Concierge
         </h1>
         <p className="text-xl md:text-2xl font-light text-white/90 tracking-wide mb-8 animate-fade-in-delay">
-          Exceptional service and bespoke experiences in Rwanda
+          Exceptional service and bespoke experiences
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-delay-2">
           <a
